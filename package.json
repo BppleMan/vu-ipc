@@ -1,0 +1,32 @@
+{
+    "name": "@variables-ultra/ipc",
+    "version": "1.0.0",
+    "description": "A type-safe Inter-iFrame Communication library",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "scripts": {
+        "esm": "tsc --project tsconfig.esm.json",
+        "cjs": "tsc --project tsconfig.cjs.json",
+        "types": "tsc --project tsconfig.types.json",
+        "build": "pnpm esm && pnpm cjs && pnpm types",
+        "watch": "parallely \"pnpm esm --watch\" \"pnpm cjs --watch\" \"pnpm types --watch\"",
+        "test": "jest --detectOpenHandles"
+    },
+    "keywords": [],
+    "author": "BppleMan",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@variables-ultra/core": "link:../variables-ultra/libs/vu-core/typescript",
+        "uuid": "^10.0.0"
+    },
+    "devDependencies": {
+        "@jest/globals": "^29.7.0",
+        "@types/uuid": "^10.0.0",
+        "jest": "^29.7.0",
+        "jest-junit": "^16.0.0",
+        "reflect-metadata": "^0.2.2",
+        "tsyringe": "^4.8.0",
+        "typescript": "^5.6.3"
+    }
+}
