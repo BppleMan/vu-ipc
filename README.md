@@ -1,8 +1,7 @@
 # vu-ipc
 A type-safe Inter-iFrame Communication library.
 
-Provides an ipc channel, but when passing across iFrames/WorkThreads through postMessage/onmessage, using this 
-channel can provide an experience similar to method calling.
+A type-safe ipc (Inter-iFrame Communication) library that aims to simplify message communication between iframes and work threads, making postMessage as easy to use as a function call.
 
 ```
 ---------------                                                              --------------
